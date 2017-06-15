@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	
+	<package name="Exam" namespace="/" extends="struts-default">
+		
+		<action name="student" class="com.fanye.action.StudentAction">
+			<result name="success">/main.jsp</result>
+			<result name="error">/login.jsp</result>
+			<result name="logout" type="redirect">/login.jsp</result>
+			<result name="save">/main.jsp</result>
+		</action>
+		
+		<action name="paper" class="com.fanye.action.PaperAction">
+			<result name="success">/main.jsp</result>
+			<result name="save">/main.jsp</result>
+		</action>
+		
+		<action name="exam" class="com.fanye.action.ExamAction">
+			<result name="success">/main.jsp</result>
+		</action>
+		
+		<action name="manager" class="com.fanye.action.ManagerAction">
+			<result name="success">/main.jsp</result>
+			<result name="error">/login2.jsp</result>
+			<result name="logout" type="redirect">/login2.jsp</result>
+		</action>
+		
+		<action name="question" class="com.fanye.action.QuestionAction">
+			<result name="success">/main.jsp</result>
+			<result name="save">/main.jsp</result>
+		</action>
+	</package>
+	
+
+     
+</struts>
